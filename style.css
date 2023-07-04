@@ -33,6 +33,7 @@ form{
     outline: none;
     border: none;
     padding: 10px;
+    cursor: pointer;
 }
 
 .edit-student{
@@ -69,9 +70,6 @@ th,td{
     text-align: center;
     width: 20px;
 }
-tbody{
-    min-height: 100px;
-}
 .degree{
     display: flex;
     justify-content: space-between;
@@ -89,4 +87,7 @@ tbody{
 table button{
     outline: none;
     border: none;
+}
+button{
+    cursor: pointer;
 }
