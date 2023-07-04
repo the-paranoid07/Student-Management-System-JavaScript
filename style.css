@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+    font-family: 'Inter', sans-serif;
+}
+
+.header{
+    font-size: 30px;
+    padding: 40px 40px 0px 40px;
+}
+#form{
+    padding: 40px;
+}
+#form input{
+    padding: 10px;
+    outline: none;
+    border: 1px solid white;
+    width: 32.2%;
+}
+form{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.add-student{
+    width: 500px;
+    color: black;
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.edit-student{
+    width: 500px;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: 1px solid white;
+    padding: 10px;
+
+}
+#search{
+    padding: 0px 40px;
+}
+#search input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    outline: none;
+}
+#table{
+    padding: 40px;
+}
+table{
+    width: 100%;
+}
+
+th,td{
+    padding: 20px;
+    text-align:left;
+    border: 1px solid white;
+}
+.id{
+    text-align: center;
+    width: 20px;
+}
+tbody{
+    min-height: 100px;
+}
+.degree{
+    display: flex;
+    justify-content: space-between;
+}
+.items{
+    display: flex;
+    gap: 10px;
+}
+.items img:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.64);
+    border-radius: 2px;
+
+}
+table button{
+    outline: none;
+    border: none;
+}

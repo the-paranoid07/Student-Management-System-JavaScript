@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p class="header">Student Management CRUD</p>
+    </header>
+    <main>
+        <section>
+            <form id="form" action="">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required> 
+                <input type="text" name="gpa" placeholder="GPA" required>
+                <input type="number" name="age" placeholder="Age" required>
+                <input type="text" name="degree" placeholder="Degree" required>
+                <button class="add-student" type="submit">Add Student</button>
+            </form>
+        </section>
+        <section id="search">
+            <input id="searchInput" type="search" placeholder="Search By Name, email or degree">
+        </section>
+        <section >
+            <table id="table" cellspacing="0px">
+                <thead>
+                    <tr>
+                       <th class="id">ID</th>
+                       <th class="name">Student Name</th>
+                       <th class="name">Email</th>
+                       <th class="age">Age</th>
+                       <th class="gpa">GPA</th>
+                       <th class="degree">Degree</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                    <!-- <tr>
+                        <td class="id">1</dh>
+                        <td class="name">ANish Pal</td>
+                        <td class="name">anish@gmail.coom</td>
+                        <td class="age">22</td>
+                        <td class="gpa">9</td>
+                        <th class="degree">
+                            <div class="degree-name">B.sc</div>
+                            <div class="items">
+                                <button >
+                                    <img class="edit" src="./icons/edit.png" alt="edit">
+                                </button>
+                                <button >
+                                    <img class="delete" src="./icons/delete.png" alt="delete">
+                                </button>
+                            </div>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
