@@ -1,5 +1,7 @@
 const form = document.getElementById("form");
-const students = [];
+//filled some initialdata for testing
+const students = [{ ID: 1, name: 'Alice', age: 21, grade: 'A', degree: 'Btech', email: 'alice@example.com' }];
+addDataIntoTable(students)
 
 //student to be edited
 let editedStudent=null;
@@ -72,18 +74,32 @@ const table = document.getElementById("table");
 table.addEventListener("click" , (e) => {
     //deleteing the row data
     if(e.target.classList.contains("delete")){
-        const row = e.target.closest("tr");
-        const rowID = row.children[0].innerText ;
-        let index;
-        //deleteing record from students array
-        for(let i = 0 ;i < students.length; i++){
-            if(rowID == students[i].ID){
-                index=i;
-                break;
+        const prompt = document.getElementById("delete-prompt");
+        prompt.style.visibility = "visible";
+        const yesButton = document.getElementsByClassName("yes")[0];
+        const noButton = document.getElementsByClassName("no")[0];
+
+        yesButton.addEventListener("click", () => {
+            delteRow();
+        })
+        noButton.addEventListener("click", () => {
+            prompt.style.visibility = "hidden";
+        })
+        function delteRow(){
+            const row = e.target.closest("tr");
+            const rowID = row.children[0].innerText ;
+            let index;
+            //deleteing record from students array
+            for(let i = 0 ;i < students.length; i++){
+                if(rowID == students[i].ID){
+                    index=i;
+                    break;
+                }
             }
+            students.splice(index,1);
+            row.remove();
+            prompt.style.visibility = "hidden";
         }
-        students.splice(index,1);
-        row.remove();
     }
     //editing the exisitng record
     if(e.target.classList.contains("edit")){

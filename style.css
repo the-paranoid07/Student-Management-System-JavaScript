@@ -91,3 +91,32 @@ table button{
 button{
     cursor: pointer;
 }
+
+#delete-prompt{
+    border: 1px solid white;
+    position: absolute;
+    top: 165px;
+    left: 475px;
+    background-color: white;
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    visibility:hidden;
+}
+.message{
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+}
+#delete-prompt .buttons{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+#delete-prompt button{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 13px;
+}
